@@ -2,9 +2,6 @@ package com.home.springbootwebtest.service.impl;
 
 import com.home.springbootwebtest.dto.PaymentDTO;
 import com.home.springbootwebtest.service.PaymentService;
-import com.home.springbootwebtest.service.SuperService;
-import org.springframework.context.annotation.Lazy;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
