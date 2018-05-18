@@ -1,4 +1,6 @@
 package com.home.springbootwebtest.dto;
 
-public class PaymentDTO {
+import java.io.Serializable;
+
+public class PaymentDTO implements Serializable {
 }

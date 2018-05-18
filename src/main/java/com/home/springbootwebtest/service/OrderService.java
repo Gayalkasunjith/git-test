@@ -1,4 +1,6 @@
 package com.home.springbootwebtest.service;
 
-public interface OrderService {
+import com.home.springbootwebtest.dto.OrderDTO;
+
+public interface OrderService extends SuperService<OrderDTO> {
 }

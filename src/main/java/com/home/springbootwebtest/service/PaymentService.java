@@ -1,4 +1,6 @@
 package com.home.springbootwebtest.service;
 
-public interface PaymentService {
+import com.home.springbootwebtest.dto.PaymentDTO;
+
+public interface PaymentService extends SuperService<PaymentDTO> {
 }
