@@ -1,18 +1,16 @@
 package com.home.springbootwebtest.dto;
 
-
-import java.io.Serializable;
-
 /**
  * Customer DTO
  * Use for travel customer details
  */
-public class CustomerDTO implements Serializable {
+public class CustomerDTO extends SuperDTO {
 
     private int id;
     private String name;
     private String address;
     private String tele;
+    private OrderDTO orderDTO;
 
     public CustomerDTO() {
     }
@@ -24,6 +22,21 @@ public class CustomerDTO implements Serializable {
         this.setTele(tele);
     }
 
+    public CustomerDTO(int id, String name, String address, String tele, OrderDTO orderDTO) {
+        this.id = id;
+        this.name = name;
+        this.address = address;
+        this.tele = tele;
+        this.orderDTO = orderDTO;
+    }
+
+    public OrderDTO getOrderDTO() {
+        return orderDTO;
+    }
+
+    public void setOrderDTO(OrderDTO orderDTO) {
+        this.orderDTO = orderDTO;
+    }
 
     public int getId() {
         return id;
@@ -64,6 +77,7 @@ public class CustomerDTO implements Serializable {
                 ", name='" + name + '\'' +
                 ", address='" + address + '\'' +
                 ", tele='" + tele + '\'' +
+                ", orderDTO=" + orderDTO +
                 '}';
     }
 }

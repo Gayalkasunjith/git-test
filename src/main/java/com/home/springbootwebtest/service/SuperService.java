@@ -1,11 +1,13 @@
 package com.home.springbootwebtest.service;
 
-import com.home.springbootwebtest.dto.CustomerDTO;
+import com.home.springbootwebtest.dto.SuperDTO;
 
+import javax.annotation.Resource;
 import java.io.Serializable;
 import java.util.List;
 
-public interface SuperService<T extends Serializable> {
+@Resource
+public interface SuperService<T extends SuperDTO> {
 
     boolean save(T t);
 

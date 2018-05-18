@@ -2,15 +2,23 @@ package com.home.springbootwebtest.service.impl;
 
 import com.home.springbootwebtest.dto.OrderDTO;
 import com.home.springbootwebtest.service.OrderService;
-import com.home.springbootwebtest.service.SuperService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+import javax.transaction.Transactional;
 import java.util.List;
 
-public class OrderServiceImpl implements SuperService<OrderDTO> {
+@Service
+public class OrderServiceImpl implements OrderService {
+
+    @Autowired
+    private OrderService orderService;
 
     @Override
+    @Transactional
     public boolean save(OrderDTO orderDTO) {
-        return false;
+        boolean saveOrder = orderService.save(orderDTO);
+        return saveOrder;
     }
 
     @Override

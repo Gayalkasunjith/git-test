@@ -1,11 +1,14 @@
 package com.home.springbootwebtest.domain;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.Objects;
 
 @Entity
 @Table(name = "orders")
-public class Order {
+public class Order implements Serializable {
+
+    private static final long serialVersionUID = 1L;
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -18,6 +21,11 @@ public class Order {
     private Customer customer;
 
     public Order() {
+    }
+
+    public Order(String date, Customer customer) {
+        this.date = date;
+        this.customer = customer;
     }
 
     public Order(int id, String date, Customer customer) {

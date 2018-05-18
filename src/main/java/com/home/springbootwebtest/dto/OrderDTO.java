@@ -2,7 +2,7 @@ package com.home.springbootwebtest.dto;
 
 import java.io.Serializable;
 
-public class OrderDTO implements Serializable {
+public class OrderDTO extends SuperDTO {
 
     private int id;
     private String date;
